@@ -107,6 +107,9 @@ git clone https://github.com/Gasuaska/haplotypes_research.git
 
 Шаг 2. Настрой виртуальное окружение и установи зависимости:
 
+Настройка виртуального окружения: 
+
+
 Команда для Windows:
 
 ```bash
@@ -130,6 +133,9 @@ source venv/Scripts/activate
 ```bash
 source venv/bin/activate 
 ```
+
+Установка зависимостей:
+
 
 ```bash
 pip install -r requirements.txt 
