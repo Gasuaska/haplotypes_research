@@ -27,7 +27,9 @@
 - строка гаплотипа
 пример:
 
+```
 A*01-B*08-DRB1*15-DQB1*06
+```
 
 
 - количество людей с таким гаплотипом
@@ -64,11 +66,14 @@ number	people_amounth
 
 2️⃣ Excel с образцами (гаплотипами)
 
+```
 haplotype	                people_amounth	research
 
 A*01-B*08-DRB1*15-DQB1*06	12	            7
 
 A*02-B*07-DRB1*15-DQB1*06	8	            8
+```
+
 
 3️⃣ Excel с заданиями (что и как считать)
 
@@ -76,11 +81,13 @@ A*02-B*07-DRB1*15-DQB1*06	8	            8
 
 Пример:
 
+```
 researches	full_loci	partial_loci	output
 
 7,8	        A,B,C	    DRB1	        table_7_8.xlsx
 
 7,8	        A,B		                    table_AB_only.xlsx
+```
 
 
 Пояснения:
@@ -184,7 +191,9 @@ python manage.py proceed_samples
 
 - разбивает строки вида
 
+```
 A*01-B*08-DRB1*15
+```
 
 - создаёт отдельные локусы
 
@@ -221,11 +230,13 @@ python manage.py proceed_jobs job.xlsx
 
 Excel-файл вида:
 
+```
 Гаплотип	        Всего	Исследование 7	Исследование 8
 
 A*01-B*08-DRB1*15	20	    12	            8
 
 A*02-B*07-DRB1*15	9	    4	            5
+```
 
 ⚠️ Важные замечания
 
