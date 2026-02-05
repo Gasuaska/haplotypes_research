@@ -101,27 +101,39 @@ output — имя Excel-файла с результатом
 
 Шаг 1. Склонируй проект с гитхаба:
 
+```bash
 git clone https://github.com/Gasuaska/haplotypes_research.git
+```
 
 Шаг 2. Настрой виртуальное окружение и установи зависимости:
 
 Команда для Windows:
 
+```bash
 python -m venv venv
+```
 
 Команда для Linux и macOS:
 
+```bash
 python3 -m venv venv 
+```
 
 Команда для Windows:
 
+```bash
 source venv/Scripts/activate
+```
 
 Для Linux и macOS:
 
+```bash
 source venv/bin/activate 
+```
 
+```bash
 pip install -r requirements.txt 
+```
 
 Готово! Проект может работать.
 
@@ -129,7 +141,9 @@ pip install -r requirements.txt
 
 Шаг 1. Импорт исследований
 
+```bash
 python manage.py import_research research.xlsx
+```
 
 
 Что делает:
@@ -140,7 +154,9 @@ python manage.py import_research research.xlsx
 
 Шаг 2. Импорт гаплотипов
 
+```bash
 python manage.py import_samples samples.xlsx
+```
 
 
 Что делает:
@@ -153,7 +169,9 @@ python manage.py import_samples samples.xlsx
 
 Шаг 3. Разбор гаплотипов на локусы
 
+```bash
 python manage.py proceed_samples
+```
 
 
 Что делает:
@@ -170,7 +188,9 @@ A*01-B*08-DRB1*15
 
 Шаг 4. Подсчёт и выгрузка таблиц
 
+```bash
 python manage.py proceed_jobs job.xlsx
+```
 
 
 Что делает:
@@ -227,11 +247,27 @@ Excel можно менять и перезапускать команды ск�
 
 1. Создай суперпользователя:
 
-python manage.py createsuperuser (python3 manage.py createsuperuser для Mac и Linux)
+```bash
+python manage.py createsuperuser
+```
+Windows
+
+
+```bash
+python3 manage.py createsuperuser
+```
+для Mac и Linux
 
 2. Запусти сервер:
 
-python manage.py runserver (python3 manage.py runserver для Mac и Linux)
+```bash
+python manage.py runserver
+```
+
+```bash
+python3 manage.py runserver
+```
+
 
 Админка доступна по адресу 127.0.0.1:8000/admin
 
