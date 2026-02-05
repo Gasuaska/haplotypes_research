@@ -9,12 +9,12 @@ class LocusInline(admin.TabularInline):
 class SampleInline(admin.TabularInline):
     model = Sample
     extra = 0
-    readonly_fields = ('haplotype', 'people_amounth')
+    readonly_fields = ('haplotype', 'people_amount')
     inlines = [LocusInline]
 
 @admin.register(Research)
 class ResearchAdmin(admin.ModelAdmin):
-    list_display = ('number', 'people_amounth', 'sample_count')
+    list_display = ('number', 'people_amount', 'sample_count')
     inlines = [SampleInline]
 
     def sample_count(self, obj):
@@ -23,7 +23,7 @@ class ResearchAdmin(admin.ModelAdmin):
 
 @admin.register(Sample)
 class SampleAdmin(admin.ModelAdmin):
-    list_display = ('haplotype', 'research', 'people_amounth', 'locus_count')
+    list_display = ('haplotype', 'research', 'people_amount', 'locus_count')
     list_filter = ('research',)
     search_fields = ('haplotype',)
 

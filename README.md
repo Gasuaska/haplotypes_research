@@ -61,7 +61,7 @@ A*01-B*08-DRB1*15-DQB1*06
 Пример:
 
 ```
-number	people_amounth
+number	people_amount
 
 7	    120
 
@@ -72,7 +72,7 @@ number	people_amounth
 2️⃣ Excel с образцами (гаплотипами)
 
 ```
-haplotype	                people_amounth	research
+haplotype	                people_amount	research
 
 A*01-B*08-DRB1*15-DQB1*06	12	            7
 

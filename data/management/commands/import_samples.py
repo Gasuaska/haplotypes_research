@@ -29,12 +29,12 @@ class Command(BaseCommand):
 
         for index, row in df.iterrows():
             haplotype = row['haplotype']
-            people_amounth = row['people_amounth']
+            people_amount = row['people_amount']
             research = row['research']
             research_object = Research.objects.get(number=research)
             sample = Sample.objects.create(
                 haplotype = haplotype,
-                people_amounth=people_amounth,
+                people_amount=people_amount,
                 research = research_object
             )
         self.stdout.write(self.style.SUCCESS('Импорт данных завершён.'))

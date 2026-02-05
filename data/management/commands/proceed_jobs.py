@@ -78,7 +78,7 @@ class Command(BaseCommand):
 
                 haplotype_key = frozenset(key_parts)
 
-                count = sample.people_amounth or 0
+                count = sample.people_amount or 0
 
                 haplotypes[haplotype_key]['total'] += count
 

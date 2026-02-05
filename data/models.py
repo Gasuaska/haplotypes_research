@@ -9,7 +9,7 @@ class Research(models.Model):
 
 class Sample(models.Model):
     haplotype = models.CharField(verbose_name='Название')
-    people_amounth = models.IntegerField(verbose_name='Числовое значение')
+    people_amount = models.IntegerField(verbose_name='Числовое значение')
     research = models.ForeignKey(
         Research,
         on_delete=models.CASCADE,
@@ -18,7 +18,7 @@ class Sample(models.Model):
     )
 
     def __str__(self):
-        return f'Sample #{self.id} {self.haplotype} ({self.people_amounth})'
+        return f'Sample #{self.id} {self.haplotype} ({self.people_amount})'
 
 
 class Locus(models.Model):

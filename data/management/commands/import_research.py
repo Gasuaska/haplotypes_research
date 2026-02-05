@@ -29,14 +29,14 @@ class Command(BaseCommand):
 
         for index, row in df.iterrows():
             study_number = row['research']
-            people_amounth = row['people_amounth']
+            people_amount = row['people_amount']
 
             study, created = Research.objects.get_or_create(
                 number=study_number,
-                defaults={'people_amounth': people_amounth}
+                defaults={'people_amount': people_amount}
             )
             if not created:
-                study.people_amounth = people_amounth
+                study.people_amount = people_amount
                 study.save()
                 self.stdout.write(f'Обновлено исследование {study_number}')
             else:
