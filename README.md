@@ -154,6 +154,17 @@ source venv/bin/activate
 pip install -r requirements.txt 
 ```
 
+Применение миграций:
+
+```bash
+python manage.py makemigrations
+```
+
+
+```bash
+python manage.py migrate
+```
+
 Готово! Проект может работать.
 
 Обработка данных:

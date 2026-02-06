@@ -53,3 +53,47 @@ class Locus(models.Model):
 
     def __str__(self):
         return f'{self.name}*{self.coef1}:{self.coef2} ({self.sample})'
+
+
+class NormalizedHaplotype(models.Model):
+    research = models.ForeignKey(
+        'Research',
+        on_delete=models.CASCADE,
+        related_name='normalized_haplotypes'
+    )
+
+    format_code = models.CharField(max_length=50)
+
+    haplotype_str = models.CharField(max_length=255)
+
+    people_amount = models.PositiveIntegerField(default=0)
+    notes = models.TextField(blank=True, null=True)
+
+    class Meta:
+        unique_together = ('research', 'format_code', 'haplotype_str')
+        ordering = ['research', 'format_code', 'haplotype_str']
+
+    def __str__(self):
+        return f'{self.research.number}|{self.format_code}|{self.haplotype_str}'
+
+
+class NormalizedHaplotype1k(models.Model):
+    research1k = models.ForeignKey(
+        'Research', 
+        on_delete=models.CASCADE,
+        related_name='normalized_haplotypes1k'
+    )
+
+    format_code1k = models.CharField(max_length=50)
+
+    haplotype_str1k = models.CharField(max_length=255)
+
+    people_amount1k = models.PositiveIntegerField(default=0)
+    notes1k = models.TextField(blank=True, null=True)
+
+    class Meta:
+        unique_together = ('research1k', 'format_code1k', 'haplotype_str1k')
+        ordering = ['research1k', 'format_code1k', 'haplotype_str1k']
+
+    def __str__(self):
+        return f'{self.research1k.number}|{self.format_code1k}|{self.haplotype_str1k}'

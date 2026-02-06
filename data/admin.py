@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Research, Sample, Locus
+from .models import Research, Sample, Locus, NormalizedHaplotype, NormalizedHaplotype1k
 
 class LocusInline(admin.TabularInline):
     model = Locus
@@ -45,3 +45,6 @@ class LocusAdmin(admin.ModelAdmin):
     list_filter = ('name',)
     search_fields = ('sample__haplotype', 'name')
     ordering = ('id',)
+
+admin.site.register(NormalizedHaplotype)
+admin.site.register(NormalizedHaplotype1k)

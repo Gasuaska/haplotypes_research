@@ -43,5 +43,5 @@ class Command(BaseCommand):
                     coef2=coef2,
                     raw_coef=raw_coeff
                 )
-                self.stdout.write(
-                    self.style.SUCCESS('Обработка образцов завершена.'))
+        self.stdout.write(
+            self.style.SUCCESS('Обработка образцов завершена.'))
