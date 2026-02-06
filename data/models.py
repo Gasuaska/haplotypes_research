@@ -3,7 +3,7 @@ from django.db import models
 
 class Research(models.Model):
     number = models.IntegerField(verbose_name='Номер исследования')
-    people_amounth = models.IntegerField(verbose_name='Количество человек')
+    people_amount = models.IntegerField(verbose_name='Количество человек')
     def __str__(self):
         return f'Research #{self.number}'
 

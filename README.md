@@ -174,7 +174,7 @@ python manage.py import_research research.xlsx
 Шаг 2. Импорт гаплотипов
 
 ```bash
-python manage.py import_samples samples.xlsx
+python manage.py import_samples halpotypes.xlsx
 ```
 
 
